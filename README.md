@@ -52,4 +52,4 @@ Todas las políticas han sido creadas en modo **"Report-only"** (Solo informe) p
 ## 👤 Autor
 **Jorge Vazquez**  
 *Identity & Cybersecurity Architect*  
-[LinkedIn](https://www.linkedin.com/in/tu-perfil) | [GitHub](https://github.com/tu-usuario)
+[LinkedIn](https://www.linkedin.com/in/jv-vready) | [GitHub](https://github.com/JorgeVazquezValdez)
