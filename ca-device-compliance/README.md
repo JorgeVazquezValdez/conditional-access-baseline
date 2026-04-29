@@ -1,7 +1,3 @@
-Perfecto, Jorge. He añadido ese toque forense justo en la sección de logs para que el reporte tenga un acabado de consultoría de alto nivel.
-
-El `README.md` ya está completo y listo. Puedes copiarlo directamente.
-
 ```markdown
 # Require Compliant Device and MFA for Office 365
 
