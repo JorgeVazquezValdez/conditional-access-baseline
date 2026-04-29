@@ -1,4 +1,3 @@
-```markdown
 # Require Compliant Device and MFA for Office 365
 
 ## Descripción General
@@ -15,14 +14,8 @@ La política fue diseñada como parte de un proyecto de consultoría de segurida
 - **Controles de Concesión:** `Grant access` + `Require multifactor authentication` + `Require device to be marked as compliant`. Se requiere el cumplimiento de **todos** los controles.
 - **Estado:** `Report-only` (Solo informe) para validación.
 
-### Captura de la Política
-*[Agrega aquí una captura de pantalla de la política en Azure: `img/policy-overview.png`]*
-
 ## Resultado de la validación con "What If"
 La política se evaluó con la herramienta "What If", simulando un acceso desde un dispositivo Windows en navegador. El resultado confirmó que la política se aplicaría, exigiendo simultáneamente MFA y dispositivo compatible.
-
-### Captura del Resultado de "What If"
-*[Agrega aquí una captura de pantalla del resultado de la simulación: `img/whatif-result.png`]*
 
 ## Diagnóstico de Error Real (Simulado)
 Durante la fase de pruebas, se simuló el acceso de un usuario sin dispositivo compatible. Aunque la política está en modo `Report-only` y no bloqueó el acceso, se documentó el mensaje de error que aparecería si la política estuviera activa en modo `On`. Este mensaje está documentado en los foros oficiales de Microsoft como parte del comportamiento esperado ante una política de acceso condicional no satisfecha: *"Your sign-in was successful but does not meet the criteria to access this resource. For example, you might be signing in from a browser, app, location, or an authentication flow that is restricted by your admin."*.
@@ -31,9 +24,7 @@ Durante la fase de pruebas, se simuló el acceso de un usuario sin dispositivo c
 Si un usuario sin dispositivo conforme intenta acceder a Office 365, verá el mensaje indicado anteriormente.
 
 ### Flujo de Diagnóstico en Sign-in Logs
-*[Agrega aquí una captura de pantalla del Sign-in log mostrando la pestaña de Conditional Access: `img/signin-log-error.png`]*
-
-**Tip de Experto:** En la captura de los Sign-in Logs, asegúrate de resaltar el **Correlation ID**. En consultoría real, ese identificador es la clave para rastrear qué ocurrió exactamente en los servidores de Microsoft. Incluirlo en un reporte de este tipo le aporta un enfoque de investigación forense muy profesional.
+**Tip de Experto:** En los Sign-in Logs, el Correlation ID es la clave para rastrear qué ocurrió exactamente en los servidores de Microsoft. Incluirlo en un reporte de este tipo le aporta un enfoque de investigación forense muy profesional.
 
 ## Pasos de Remediación
 Para resolver el bloqueo y permitir el acceso, el usuario o el administrador de TI deben seguir estos pasos:
@@ -88,4 +79,3 @@ Antes de migrar esta política a modo "On", se deben considerar los siguientes p
 
 ---
 *Proyecto de consultoría interna para V-Ready Group LLC | Documentado por Jorge Vazquez*
-```
